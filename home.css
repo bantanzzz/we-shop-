@@ -294,6 +294,8 @@ main {
 .gallery-item {
     flex: 1;
     max-width: 350px;
+    position: relative;
+    overflow: hidden;
 }
 
 .gallery-item img {
@@ -306,6 +308,30 @@ main {
 
 .gallery-item img:hover {
     transform: scale(1.05);
+}
+
+.item-description {
+    padding: 20px;
+    text-align: left;
+    background-color: #fff;
+    margin-top: 15px;
+}
+
+.item-description h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.item-description p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Optional: Add hover effect */
+.gallery-item:hover .item-description {
+    background-color: #f8f8f8;
 }
 
 /* Responsive Design */
@@ -328,6 +354,11 @@ main {
     .gallery-item {
         width: 100%;
         max-width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .item-description {
+        text-align: center;
     }
 
     .our-story h2 {
