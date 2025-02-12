@@ -6,7 +6,7 @@ hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 
-// Close menu when clicking a link
+
 document.querySelectorAll('nav a').forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -14,7 +14,7 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-// Add scroll effect
+
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Add smooth scroll handling for the About link
+
 document.querySelector('a[href="#about"]').addEventListener('click', (e) => {
     // If mobile menu is open, close it
     const nav = document.querySelector('nav');

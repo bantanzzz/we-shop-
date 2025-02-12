@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header Styles */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -86,7 +86,7 @@ nav a {
     border-radius: 50%;
 }
 
-/* Hero Section Styles */
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -139,7 +139,7 @@ h1 {
     border-radius: 50%;
 }
 
-/* Responsive Design */
+
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
@@ -178,7 +178,7 @@ h1 {
     }
 }
 
-/* Hamburger Menu Styles */
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -223,7 +223,6 @@ h1 {
         gap: 20px;
     }
 
-    /* Hamburger Animation */
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -236,7 +235,7 @@ h1 {
         transform: rotate(-45deg) translate(7px, -6px);
     }
 
-    /* Adjust header for mobile */
+    
     header {
         padding: 20px;
     }
@@ -246,12 +245,12 @@ h1 {
     }
 }
 
-/* Add padding to main content to prevent it from going under the fixed header */
+
 main {
     padding-top: 80px;
 }
 
-/* Optional: Add a class for scroll effect */
+
 .header-scrolled {
     padding: 10px 50px;
     background-color: rgba(255, 255, 255, 0.95);
@@ -329,12 +328,11 @@ main {
     line-height: 1.4;
 }
 
-/* Optional: Add hover effect */
+
 .gallery-item:hover .item-description {
     background-color: #f8f8f8;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .our-story {
         padding: 60px 30px;
@@ -371,17 +369,16 @@ main {
     }
 }
 
-/* Add at the top of your CSS file */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Update the existing nav styles to account for fixed header offset */
+
 :target {
-    scroll-margin-top: 100px; /* Adjust this value based on your header height */
+    scroll-margin-top: 100px; 
 }
 
-/* Optional: Add active state for the About link */
 nav a[href="#about"]:active,
 nav a[href="#about"]:focus {
     color: #000;
