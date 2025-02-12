@@ -33,4 +33,28 @@ document.querySelector('a[href="#about"]').addEventListener('click', (e) => {
         nav.classList.remove('active');
         hamburger.classList.remove('active');
     }
+});
+
+// Product Slider functionality
+const slider = document.querySelector('.products-container');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+
+let scrollAmount = 0;
+const scrollStep = 300; // Adjust this value to control scroll distance
+
+nextBtn.addEventListener('click', () => {
+    scrollAmount += scrollStep;
+    if(scrollAmount > slider.scrollWidth - slider.clientWidth) {
+        scrollAmount = slider.scrollWidth - slider.clientWidth;
+    }
+    slider.scrollLeft = scrollAmount;
+});
+
+prevBtn.addEventListener('click', () => {
+    scrollAmount -= scrollStep;
+    if(scrollAmount < 0) {
+        scrollAmount = 0;
+    }
+    slider.scrollLeft = scrollAmount;
 }); 
