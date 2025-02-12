@@ -22,4 +22,15 @@ window.addEventListener('scroll', () => {
     } else {
         header.classList.remove('header-scrolled');
     }
+});
+
+// Add smooth scroll handling for the About link
+document.querySelector('a[href="#about"]').addEventListener('click', (e) => {
+    // If mobile menu is open, close it
+    const nav = document.querySelector('nav');
+    const hamburger = document.querySelector('.hamburger');
+    if (nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
 }); 

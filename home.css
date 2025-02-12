@@ -369,4 +369,21 @@ main {
     .story-detail {
         padding: 0 20px;
     }
+}
+
+/* Add at the top of your CSS file */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Update the existing nav styles to account for fixed header offset */
+:target {
+    scroll-margin-top: 100px; /* Adjust this value based on your header height */
+}
+
+/* Optional: Add active state for the About link */
+nav a[href="#about"]:active,
+nav a[href="#about"]:focus {
+    color: #000;
+    font-weight: bold;
 } 
