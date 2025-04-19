@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Management - WE SHOP Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin-products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar (Same as admin.html) -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/img/LOGO.png" alt="WE SHOP Logo">
+            </div>
+            <nav class="admin-nav">
+                <ul>
+                    <li>
+                        <a href="admin.html"><i class="fas fa-home"></i> Dashboard</a>
+                    </li>
+                    <li class="active">
+                        <a href="admin-products.html"><i class="fas fa-box"></i> Products</a>
+                    </li>
+                    <li>
+                        <a href="#orders"><i class="fas fa-shopping-cart"></i> Orders</a>
+                    </li>
+                    <li>
+                        <a href="#customers"><i class="fas fa-users"></i> Customers</a>
+                    </li>
+                    <li>
+                        <a href="#content"><i class="fas fa-newspaper"></i> Content</a>
+                    </li>
+                    <li>
+                        <a href="#analytics"><i class="fas fa-chart-bar"></i> Analytics</a>
+                    </li>
+                    <li>
+                        <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar (Same as admin.html) -->
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search products...">
+                </div>
+                <div class="user-menu">
+                    <span class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </span>
+                    <div class="admin-user">
+                        <img src="/img/admin-avatar.jpg" alt="Admin">
+                        <span>Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Products Content -->
+            <div class="products-content">
+                <div class="products-header">
+                    <h1>Products Management</h1>
+                    <button class="btn-add-product"><i class="fas fa-plus"></i> Add New Product</button>
+                </div>
+
+                <!-- Product Filters -->
+                <div class="product-filters">
+                    <select class="filter-category">
+                        <option value="">All Categories</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="accessories">Accessories</option>
+                    </select>
+                    <select class="filter-status">
+                        <option value="">All Status</option>
+                        <option value="in-stock">In Stock</option>
+                        <option value="out-of-stock">Out of Stock</option>
+                        <option value="low-stock">Low Stock</option>
+                    </select>
+                    <select class="filter-sort">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="price-high">Price High to Low</option>
+                        <option value="price-low">Price Low to High</option>
+                    </select>
+                </div>
+
+                <!-- Products Table -->
+                <div class="products-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" class="select-all"></th>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td><img src="img/belt.jpg" alt="Product" class="product-thumb"></td>
+                                <td>Leather Belt</td>
+                                <td>Accessories</td>
+                                <td>$50.99</td>
+                                <td>25</td>
+                                <td><span class="status in-stock">In Stock</span></td>
+                                <td class="actions">
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <!-- Add more product rows -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="btn-prev"><i class="fas fa-chevron-left"></i></button>
+                    <span class="page-numbers">
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                    </span>
+                    <button class="btn-next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html> 

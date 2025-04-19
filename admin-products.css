@@ -1,0 +1,161 @@
+/* Products Content Styles */
+.products-content {
+    padding: 20px;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.products-header h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.btn-add-product {
+    background-color: var(--primary-100);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.btn-add-product:hover {
+    background-color: var(--primary-200);
+}
+
+/* Product Filters */
+.product-filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.product-filters select {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Products Table */
+.products-table {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.product-thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+.status.in-stock {
+    background-color: #e8f5e9;
+    color: #43a047;
+}
+
+.status.out-of-stock {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.status.low-stock {
+    background-color: #fff3e0;
+    color: #fb8c00;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit, .btn-delete {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.btn-edit {
+    color: var(--primary-100);
+}
+
+.btn-delete {
+    color: var(--accent-200);
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    background-color: #f5f5f5;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.page-numbers a {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #666;
+}
+
+.page-numbers a.active {
+    background-color: var(--primary-100);
+    color: white;
+}
+
+.btn-prev, .btn-next {
+    border: none;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-filters {
+        flex-direction: column;
+    }
+    
+    .products-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn-add-product {
+        width: 100%;
+        justify-content: center;
+    }
+} 

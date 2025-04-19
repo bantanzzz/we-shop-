@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - WE SHOP</title>
+    <link rel="stylesheet" href="admin-login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <img src="/img/LOGO.png" alt="WE SHOP Logo">
+            </div>
+            <h1>Admin Login</h1>
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+                <button type="submit">Login</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+    <script src="admin-login.js"></script>
+    <script src="admin-auth.js"></script>
+    <div class="user-menu">
+        <span class="notifications">
+            <i class="fas fa-bell"></i>
+            <span class="badge">3</span>
+        </span>
+        <div class="admin-user">
+            <img src="/img/admin-avatar.jpg" alt="Admin">
+            <span>Admin User</span>
+        </div>
+        <button onclick="logout()" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
+    </div>
+</body>
+</html> 

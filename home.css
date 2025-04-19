@@ -30,6 +30,14 @@ header {
     font-weight: bold;
 }
 
+.logo img {
+    height: 80px;  /* Increased from 60px to 80px */
+    width: 80px;   /* Increased from 60px to 80px */
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -159,9 +167,19 @@ h1 {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row;  /* Changed from column to row */
+        justify-content: flex-start;  /* Aligns items to the left */
         padding: 15px 20px;
+        position: relative;  /* For hamburger menu positioning */
+    }
+
+    .logo {
+        margin-right: auto;  /* Pushes everything else to the right */
+    }
+
+    .logo img {
+        height: 65px;  /* Increased from 50px to 65px for mobile */
+        width: 65px;   /* Increased from 50px to 65px for mobile */
     }
 
     nav ul {
@@ -345,14 +363,20 @@ main {
 
 @media (max-width: 768px) {
     .image-gallery {
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 0 15px;
     }
 
     .gallery-item {
         width: 100%;
-        max-width: 500px;
-        margin-bottom: 30px;
+        max-width: none;
+        margin-bottom: 15px;
+    }
+
+    .gallery-item img {
+        height: 200px;
     }
 
     .item-description {
@@ -668,4 +692,27 @@ nav a[href="#about"]:focus {
     .news-image {
         height: 200px;
     }
+}
+
+/* Modern Color Palette */
+:root {
+  /* Primary Colors */
+  --primary-100: #6366f1;    /* Main brand color - Indigo */
+  --primary-200: #818cf8;    /* Lighter variant */
+  --primary-300: #4f46e5;    /* Darker variant */
+
+  /* Neutral Colors */
+  --neutral-100: #f8fafc;    /* Lightest background */
+  --neutral-200: #e2e8f0;    /* Light gray for borders */
+  --neutral-300: #94a3b8;    /* Muted text */
+  --neutral-400: #1e293b;    /* Main text color */
+  
+  /* Accent Colors */
+  --accent-100: #22c55e;     /* Success green */
+  --accent-200: #ef4444;     /* Error red */
+  --accent-300: #f59e0b;     /* Warning yellow */
+
+  /* Background Colors */
+  --bg-primary: #ffffff;     /* Main background */
+  --bg-secondary: #f1f5f9;   /* Secondary background */
 } 
